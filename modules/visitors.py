@@ -42,22 +42,12 @@ def show(df):
         st.warning("⚠️ Zero metrics found for this specific query parameters.")
         return
 
-    # ---------------- MONITORING STATUS HEADLINE ----------------
-    st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
-    st.markdown("""
-        <div style="background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; text-align: center; margin-bottom: 25px;">
-            <h2 style="color: #E50914; margin: 0; font-size: 20px; font-weight: 700; letter-spacing: 1px;">GLOBAL AUDIENCE MONITORING STATUS</h2>
-        </div>
-    """, unsafe_allow_html=True)
-
     # ---------------- REFINED PROFESSIONAL KPI STRIP ----------------
-    c1, c2, c3 = st.columns(3)
+    c1, c2 = st.columns(2)
     with c1:
         kpi("Aggregated Visits", f"{int(df[visitor_col].sum()):,}")
     with c2:
         kpi("Peak Single Activity", f"{int(df[visitor_col].max()):,}")
-    with c3:
-        kpi("Visitor Rating", "⭐⭐⭐⭐")
 
     st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
 
