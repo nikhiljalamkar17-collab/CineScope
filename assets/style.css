@@ -1,0 +1,105 @@
+/* GLOBAL THEME OVERRIDE */
+.stApp {
+    background: #050505 !important;
+    background-image: radial-gradient(circle at top right, #0a0a0a, #000000) !important;
+}
+
+body {
+    background: #0e1117;
+    color: #ffffff;
+}
+
+/* SIDEBAR */
+section[data-testid="stSidebar"] {
+    background: #02070f;
+    border-right: 1px solid #4a4f5b;
+}
+
+/* PREMIUM HERO HEADER */
+.premium-hero {
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    padding: 60px 50px;
+    border-radius: 35px;
+    border-bottom: 5px solid #E50914;
+    margin-bottom: 60px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.9);
+    text-align: center;
+    transform: scale(0.85);
+}
+
+.premium-hero h1 {
+    font-size: 70px !important;
+    font-weight: 900;
+    letter-spacing: -3px;
+    margin-bottom: 0px;
+}
+
+/* NAVIGATION GRID CARDS */
+.glass-nav-card {
+    background: rgba(15, 15, 15, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 22px;
+    padding: 35px 20px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.glass-nav-card:hover {
+    background: rgba(229, 9, 20, 0.08);
+    border: 1px solid rgba(229, 9, 20, 0.5);
+    transform: translateY(-15px) scale(1.02);
+}
+
+/* KPI & TOP CARDS */
+.kpi-card {
+    background: linear-gradient(135deg, #1f2937, #111827);
+    padding: 20px;
+    border-radius: 16px;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 4px 20px rgba(0,0,0,0.6);
+}
+
+.top-card {
+    background: linear-gradient(135deg, #362b69c1, #143167);
+    padding: 25px;
+    border-radius: 18px;
+    text-align: center;
+    color: white;
+    box-shadow: 0px 6px 25px rgba(0,0,0,0.7);
+}
+
+.chart-card {
+    background: #111827;
+    padding: 15px;
+    border-radius: 16px;
+    box-shadow: 0px 4px 15px rgba(0,0,0,0.5);
+}
+
+/* MODERN CAPSULE BUTTONS */
+div.stButton > button {
+    background: transparent !important;
+    border: 1px solid rgba(229, 9, 20, 0.5) !important;
+    color: #E50914 !important;
+    border-radius: 50px !important;
+    font-weight: 700 !important;
+    height: 45px;
+    transition: 0.4s all !important;
+}
+
+div.stButton > button:hover {
+    background: #E50914 !important;
+    color: white !important;
+    box-shadow: 0px 0px 20px rgba(229, 9, 20, 0.4) !important;
+}
+
+/* SYSTEM LIVE INDICATOR */
+.system-status {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 10px 30px; 
+    background: rgba(229, 9, 20, 0.05); 
+    border-radius: 50px; 
+    border: 1px solid rgba(229, 9, 20, 0.2); 
+    margin-bottom: 30px;
+}
