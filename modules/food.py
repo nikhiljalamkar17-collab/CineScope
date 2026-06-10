@@ -56,16 +56,13 @@ def show(df):
     st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
 
     # ---------------- KPI ----------------
-    c1, c2, c3 = st.columns(3)
+    c1, c2 = st.columns(2)
 
     with c1:
         kpi("Total Items", df.shape[0])
 
     with c2:
         kpi("Total Sales", int(df[value_col].sum()))
-
-    with c3:
-        kpi("Avg Sales", int(df[value_col].mean()))
 
     st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
 
