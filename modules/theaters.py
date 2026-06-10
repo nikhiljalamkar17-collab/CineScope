@@ -84,13 +84,11 @@ def show(df):
     st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
 
     # ---------------- REFINED PROFESSIONAL KPI STRIP ----------------
-    c1, c2, c3 = st.columns(3)
+    c1, c2 = st.columns(2)
     with c1:
         kpi("Active Locations", agg_df[theater_col].nunique())
     with c2:
         kpi("Aggregated Revenue", f"₹ {int(agg_df[revenue_col].sum()):,}")
-    with c3:
-        kpi("Average Ticket Pull", f"₹ {int(agg_df[revenue_col].mean()):,}")
 
     st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
 
