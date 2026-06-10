@@ -76,7 +76,7 @@ def show(df):
         emp_stats = df.iloc[0]
         desig_label = f" | Role: {emp_stats[desig_col]}" if desig_col else ""
         top_card(
-            f"PROFESSIONAL DOSSIER: {selected_emp}", 
+            f"PERSONNEL PROFILE: {selected_emp}", 
             f"{int(emp_stats[performance_col])} SCORE POINTS", 
             f"UNIT: {emp_stats[dept_col]}{desig_label}"
         )
@@ -92,13 +92,11 @@ def show(df):
     st.markdown("<div style='margin-top: 25px;'></div>", unsafe_allow_html=True)
 
     # ---------------- REFINED PROFESSIONAL KPI STRIP ----------------
-    c1, c2, c3 = st.columns(3)
+    c1, c2 = st.columns(2)
     with c1:
-        kpi("Monitored Roster", df.shape[0])
+        kpi("Active Workforce", df.shape[0])
     with c2:
-        kpi("Mean Performance Score", f"{round(df[performance_col].mean(), 1)} Pts")
-    with c3:
-        kpi("Peak Resource Output", f"{int(df[performance_col].max())} Pts")
+        kpi("Avg Performance Score", f"{round(df[performance_col].mean(), 1)} Pts")
 
     st.markdown("<div style='margin-top: 40px;'></div>", unsafe_allow_html=True)
 
