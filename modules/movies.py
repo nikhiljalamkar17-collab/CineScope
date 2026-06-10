@@ -186,21 +186,13 @@ def show(df):
     avg_roi = df["ROI"].mean() * 100
     hit_ratio = (df["Verdict"] == "Hit").mean() * 100
 
-    c1, c2, c3, c4 = st.columns(4)
+    c1, c2 = st.columns(2)
 
     with c1:
         kpi("Total Movies", df.shape[0])
 
     with c2:
         kpi("Total Revenue", format_currency(df[revenue_col].sum()))
-
-    with c3:
-        kpi("Net Profit", format_currency(total_profit))
-
-    with c4:
-        kpi("Avg ROI", f"{round(avg_roi,1)}%")
- 
-
     # ---------------- CHARTS ----------------
 # ---------------- 2-CHART MASTER STRATEGIC VIEW ----------------
     st.markdown("### 📊 Enterprise Movie Analytics")
